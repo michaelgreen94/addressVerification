@@ -1,6 +1,6 @@
 import AddressController from "./components/address/address-controller.js"
 
-class app {
+export default class App {
   constructor() {
     this.controllers = {
       addressController: new AddressController()
@@ -8,4 +8,4 @@ class app {
   }
 }
 
-window.app = new app()
+window.app = new App()

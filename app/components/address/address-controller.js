@@ -1,11 +1,13 @@
 import AddressService from "./address-service.js"
 
 let addressService = new AddressService()
-
-export default class addressController {
-  constructor() {}
-  sendAddress(event) {
-    event.preventdefault()
-    console.log(event)
+console.log("made it?")
+export default class AddressController {
+  constructor() {
+    console.log("something")
+  }
+  sendAddress(e) {
+    e.preventDefault()
+    console.log(e)
   }
 }
