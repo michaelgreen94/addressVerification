@@ -6,13 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>AddressVerification</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-  <h1>Address Verification</h1>
-  <input type="text">
-  <button>SEARCH</button>
-  <button>UPLOAD</button>
+  <div class="sendAddress">
+    <form onsubmit="app.controllers.addressController.sendAddress(event)">
+      <input type="text" placeholder="Enter Address Here">
+      <input type="submit">
+    </form>
+  </div>
+  <div class="recieveAddress">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
   <script src="app/main.js"></script>
 </body>
 

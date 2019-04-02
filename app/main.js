@@ -1,9 +1,9 @@
-import addressController from "./components/address/address-controller.js"
+import AddressController from "./components/address/address-controller.js"
 
 class app {
   constructor() {
     this.controllers = {
-      addressController: new addressController()
+      addressController: new AddressController()
     }
   }
 }
