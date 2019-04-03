@@ -17,5 +17,5 @@
 //   <
 //   Zip4 > 1440 < /Zip4></Address > < /AddressValidateResponse>
 
+console.log("Made it to Service")
 export default class AddressService {}
-console.log("got here")
