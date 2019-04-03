@@ -1,3 +1,4 @@
+let key = 'AIzaSyAS9kz_GcI4HcQcoIYiqpqL_Cei_ogEwxk'
 console.log("Made it to Service")
 export default class AddressService {
   constructor() {
@@ -8,7 +9,7 @@ export default class AddressService {
     axios.get('https://maps.googleapis.com/maps/api/place/textsearch/json?', {
         params: {
           query: location,
-          key: 'AIzaSyAS9kz_GcI4HcQcoIYiqpqL_Cei_ogEwxk'
+          key: key
         }
       })
       .then(function (res) {
