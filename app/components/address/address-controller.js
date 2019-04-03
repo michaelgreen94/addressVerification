@@ -9,7 +9,6 @@ export default class AddressController {
   sendAddress(data) {
     data.preventDefault()
     let formData = data.target
-    debugger
-    console.log(formData)
+    addressService.search(formData[0])
   }
 }
