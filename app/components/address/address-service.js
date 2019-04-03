@@ -1,5 +1,5 @@
 let key = 'AIzaSyAS9kz_GcI4HcQcoIYiqpqL_Cei_ogEwxk'
-console.log("Made it to Service")
+console.log("Made it to Service test")
 export default class AddressService {
   constructor() {
 
