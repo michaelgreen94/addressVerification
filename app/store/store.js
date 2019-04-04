@@ -1,8 +1,9 @@
-import Address from "../models/address"
-import Axios from "axios";
+// import Address from "../models/address"
 
-const server = Axios.create({
-  baseURL: 'http://localhost:8080',
+// let key = process.env.SECRET_MESSAGE
+
+const api = axios.create({
+  baseURL: 'https://maps.googleapis.com/maps/api/place/textsearch/json?',
   timeout: 3000
 })
 
@@ -18,7 +19,11 @@ function setState(prop, data) {
 
 export default class Store {
   search(formData, getAddresses) {
-    server.get('/address', formData)
+    let params = {
+      query: formData[0],
+      key: key
+    }
+    api.get(params)
       .then(res => {
         let addresses = res.data.map(add => new Address(add))
         state.addresses.push(addresses)
