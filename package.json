@@ -18,5 +18,8 @@
   "homepage": "https://github.com/michaelgreen94/addressVerification#readme",
   "devDependencies": {
     "dotenv": "^7.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
   }
 }

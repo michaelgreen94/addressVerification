@@ -1,3 +1,5 @@
+import Address from "../models/address"
+
 let key = process.env.SECRET_MESSAGE
 console.log("Made it to Service test")
 console.log(key)
