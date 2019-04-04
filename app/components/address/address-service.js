@@ -1,5 +1,6 @@
-let key = 'AIzaSyAS9kz_GcI4HcQcoIYiqpqL_Cei_ogEwxk'
+let key = process.env.SECRET_MESSAGE
 console.log("Made it to Service test")
+console.log(key)
 export default class AddressService {
   constructor() {
 

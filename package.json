@@ -1,0 +1,22 @@
+{
+  "name": "addressverification",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelgreen94/addressVerification.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelgreen94/addressVerification/issues"
+  },
+  "homepage": "https://github.com/michaelgreen94/addressVerification#readme",
+  "devDependencies": {
+    "dotenv": "^7.0.0"
+  }
+}
