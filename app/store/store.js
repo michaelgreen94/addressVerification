@@ -1,6 +1,7 @@
 // import Address from "../models/address"
 
-// let key = process.env.SECRET_MESSAGE
+let key = config.SECRET_MESSAGE
+console.log(key)
 
 const api = axios.create({
   baseURL: 'https://maps.googleapis.com/maps/api/place/textsearch/json?',
