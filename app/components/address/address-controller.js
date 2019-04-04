@@ -1,14 +1,16 @@
-import AddressService from "./address-service.js"
+import Store from "../../store/store.js"
 
-let addressService = new AddressService()
+let store = new Store()
 
 console.log("Made it to the Controller")
 
 export default class AddressController {
-  constructor() {}
+  constructor() {
+
+  }
   sendAddress(data) {
     data.preventDefault()
     let formData = data.target
-    addressService.search(formData[0])
+    store.search(formData[0])
   }
 }
