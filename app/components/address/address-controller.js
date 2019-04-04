@@ -11,6 +11,6 @@ export default class AddressController {
   sendAddress(data) {
     data.preventDefault()
     let formData = data.target
-    store.search(formData[0])
+    store.search(formData)
   }
 }

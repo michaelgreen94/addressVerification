@@ -3,10 +3,11 @@
 let key = config.SECRET_MESSAGE
 console.log(key)
 
-const api = axios.create({
-  baseURL: 'https://maps.googleapis.com/maps/api/place/textsearch/json?',
-  timeout: 3000
-})
+// const api = axios.create({
+//   baseURL: 'https://maps.googleapis.com/maps/api/place/textsearch/json?'
+// })
+
+let baseURL = 'https://maps.googleapis.com/maps/api/place/textsearch/json?'
 
 let store
 
@@ -18,19 +19,24 @@ function setState(prop, data) {
   state[prop] = data
 }
 
+
 export default class Store {
   search(formData, getAddresses) {
     let params = {
-      query: formData[0],
+      query: formData[0].value,
       key: key
     }
-    api.get(params)
+    axios.get(baseURL, {
+        params
+      })
       .then(res => {
-        let addresses = res.data.map(add => new Address(add))
-        state.addresses.push(addresses)
-        getAddresses()
+        console.log(res)
+      })
+      .catch(function (e) {
+        console.log(e)
       })
   }
+
   constructor() {
     if (store) {
       return store
