@@ -1,13 +1,13 @@
 // import Address from "../models/address"
 
-let key = config.SECRET_MESSAGE
-console.log(key)
+// let key = config.SECRET_MESSAGE
 
-// const api = axios.create({
-//   baseURL: 'https://maps.googleapis.com/maps/api/place/textsearch/json?'
-// })
+const server = axios.create({
+  baseURL: '//localhost:3000',
+  timeout: 3000
+})
 
-let baseURL = 'https://maps.googleapis.com/maps/api/place/textsearch/json?'
+// let baseURL = 'https://maps.googleapis.com/maps/api/place/textsearch/json?'
 
 let store
 
@@ -19,18 +19,16 @@ function setState(prop, data) {
   state[prop] = data
 }
 
-
 export default class Store {
   search(formData, getAddresses) {
     let params = {
       query: formData[0].value,
-      key: key
+      // key: key
     }
-    axios.get(baseURL, {
-        params
-      })
+    server.get('/api/addresses', params)
       .then(res => {
-        console.log(res)
+        let correctAddress = res.data
+        console.log('here', correctAddress)
       })
       .catch(function (e) {
         console.log(e)
@@ -49,26 +47,3 @@ export default class Store {
     }
   }
 }
-
-
-
-
-
-
-// let key = process.env.SECRET_MESSAGE
-// console.log("Made it to Service test")
-// console.log(key)
-//     let location = '901 Maple st Nampa ID'
-//     server.get('https://maps.googleapis.com/maps/api/place/textsearch/json?', {
-//         params: {
-//           query: location,
-//           key: key
-//         }
-//       })
-//       .then(function (res) {
-//         console.log(res)
-//       })
-//       .catch(function (e) {
-//         console.log(e)
-//       })
-//   }
