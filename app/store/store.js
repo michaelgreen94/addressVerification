@@ -3,7 +3,7 @@
 // let key = config.SECRET_MESSAGE
 
 const server = axios.create({
-  baseURL: '//localhost:3000',
+  baseURL: '//localhost:5000',
   timeout: 3000
 })
 

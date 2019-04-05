@@ -1,10 +1,10 @@
 let express = require('express')
 let bp = require('body-parser')
 let server = express()
-let port = 3000
+let PORT = process.env.PORT || 5000
 let cors = require('cors')
 
-// let key = process.env.SECRET_MESSAGE
+let key = process.env.SECRET_MESSAGE
 
 server.use(cors())
 server.use(bp.json())
@@ -25,6 +25,6 @@ server.use('*', (req, res, next) => {
   res.status(404).send('<h1>404</h1>')
 })
 
-server.listen(port, () => {
-  console.log('listening on port: ', port)
+server.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`)
 })

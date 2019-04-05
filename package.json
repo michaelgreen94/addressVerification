@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server/index",
+    "dev": "nodemon ./server/index"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,8 @@
   },
   "homepage": "https://github.com/michaelgreen94/addressVerification#readme",
   "devDependencies": {
-    "dotenv": "^7.0.0"
+    "dotenv": "^7.0.0",
+    "nodemon": "^1.18.10"
   },
   "dependencies": {
     "axios": "^0.18.0",
